@@ -76,11 +76,11 @@ public class LongestPath2 {
 
         dfs(1,-1);
 
-        int maxPath=0;
-
-        for(int i=1;i<=n;i++){
-            maxPath=Math.max(maxPath,dp[i]);
+        int maxPath = 0;
+        for (int i = 1; i <= n; i++) {
+            maxPath = Math.max(maxPath, Math.max(dp[i], dp2[i]));
         }
+
         System.out.println(maxPath);
     }
 }
